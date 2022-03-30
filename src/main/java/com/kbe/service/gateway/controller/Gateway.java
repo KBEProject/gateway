@@ -20,16 +20,15 @@ public class Gateway {
                 .route("login", r -> r.path("/user/login")
                         .and()
                         .uri(USER))
-                .route("getConversions", r -> r.path("/conversions/findConversionOfUser")
+                .route("getConversions", r -> r.path("/conversions/findConversionsOfUser")
                         .and()
                         .uri(CONVERTER))
                 .route("insert", r -> r.path("/conversions/insert")
                         .and()
                         .uri(CONVERTER))
-                .route("delete", r -> r.path("/conversions/deleteAll")
+                .route("delete", r -> r.path("/conversions/deleteAllUserConversions")
                         .and()
                         .uri(CONVERTER))
                 .build();
-
     }
 }
